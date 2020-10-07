@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to root_url
+      redirect_to admin_root_url
       flash[:success] = 'データの登録が完了しました。'
     else
       render :new
